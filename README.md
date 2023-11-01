@@ -22,8 +22,34 @@
 
 `To use Redux Saga in Redux-based application, need to install it separately and configure it as middleware for your Redux Store. it's a separate library that works Redux to enhance it's capabilities.`
 
+---------
 
+### Diff of Synchronous operations V/S Asynchronous operation
 
+1. Synchronous Operations:
+- Executed line by line.
+- When operation is initialted or started, the program will wait for it to complete first one before moving on to the next task.
+- In Synchronnous operations, the program's flow is blocked and it cannot move to excute the other operation before it finishes current one.
+- It takes to long time to perform operations and delays in your program.
+- It's easier to understand & reason about it's follow linear flow of execution.
+```
+const result = add(2, 3); // Synchronous operation
+console.log(result); // This line will execute after the addition is complete
+```
+
+2. Asynchronous Operations:
+- Do not block the program's flow.
+- Allow the program to continue executing code while waiting for the asynchronous task to complete.
+- Asynchronous operations are commonly used for tasks that may take some time to finish.
+  Like:
+  - Network requests
+  - File I/O
+  - DB queries
+  - User interactions
+- To handle the results of asynchronous operations we used :
+  1. Callbacka
+  2. Promises
+  3. Async/Await syntax 
 
 
 
