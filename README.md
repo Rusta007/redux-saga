@@ -22,7 +22,7 @@
 
 `To use Redux Saga in Redux-based application, need to install it separately and configure it as middleware for your Redux Store. it's a separate library that works Redux to enhance it's capabilities.`
 
----------
+---------------------------------------------------
 
 ### Diff of Synchronous operations V/S Asynchronous operation
 
@@ -50,6 +50,33 @@ console.log(result); // This line will execute after the addition is complete
   1. Callbacka
   2. Promises
   3. Async/Await syntax 
+------------------------------------------
+
+### Generator Function: 
+A Generator Function is a special tyoe of function in JS that allows you to pause execution and later resume it.
+- Generator functions are defined using the ```function*``` syntax and contain one ot more ```yield``` statements. Which specify points at which the function can be paused and later resumed.
+
+##### yield:
+   - The yield statement is used to pause the function's execution and return the current value of number. When you call generator.next(), it resumes the function from where it was paused and increments the number for the next yield.
+   - When you call ```generator.next().value```, you get the next number in the sequence, and the generator function pauses until the next request.
+
+```
+function* countUpTo(n){
+for(let i = 1; i <= n; i++)
+{
+  yield i;
+}
+}
+const generator  = countUpTo(5);
+
+Output:
+1
+2
+3
+4
+5
+undefined
+```
 
 
 
